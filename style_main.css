@@ -1,0 +1,58 @@
+@font-face{
+  font-family: Varela Round;
+  src:url(fonts/VarelaRound-Regular.ttf);
+}
+@font-face{
+	font-family: SquadaOne;
+	src:url(fonts/SquadaOne-Regular.ttf);
+}
+.navbar{
+	list-style-type:none;
+	margin:20px;
+	padding: 0;
+	text-align: center;
+}
+li{
+	display: inline;
+	margin:150px;
+	font-family:'Varela Round';
+	font-size: 40px;
+}
+.lbl_ajva{
+	font-size: 100px;
+	font-family: 'SquadaOne';
+    text-align:center;
+
+}
+
+.button{
+  	position: relative;
+  	top: 0%;
+  	transform: translateY(-50%);
+	margin: 0 auto;
+  	width: 320px;  
+}
+.shape {
+  	stroke-dasharray: 140 540;
+  	stroke-dashoffset: -474;
+  	stroke-width: 8px;
+  	fill: transparent;
+  	stroke: #19f6e8;
+  	border-bottom: 5px solid black;
+  	transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  	font-family: 'Roboto Condensed';
+  	font-size: 22px;
+  	line-height: 32px;
+  	letter-spacing: 8px;
+  	color: #000;
+  	top: -48px;
+  	position: relative;
+  	text-align: center;
+}
+.button:hover .shape {
+  	stroke-width: 2px;
+  	stroke-dashoffset: 0;
+  	stroke-dasharray: 760;
+}
