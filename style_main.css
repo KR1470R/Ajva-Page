@@ -13,10 +13,19 @@
 
 /* Body and etc */
 body{
-	overflow-x: hidden;
-	overflow-y: hidden;
+	/*overflow: hidden;*/
+}
+a{
+	color:#000;
+	text-decoration: none;	
 }
 /* End */
+
+/* Scrollbar */
+	::-webkit-scrollbar{
+		width:0px;
+	}
+/* End Scrollbar */
 
 /* Main Label */
 .lbl_ajva{
@@ -24,12 +33,7 @@ body{
 	font-family: 'Roboto';
     text-align:center;
 }
-.lbl:hover{
-	background: #833ab4;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-}
 /* End Main Label */
 
 
@@ -267,11 +271,13 @@ li{
 	margin: 0px auto;
 	height: 1000px;
 	width: 1000px;
-	left:50%;
+	left:60%;
 	background-color: red;
 	border-radius: 50%;
 	display:inline-block;
-	animation:5s animbubtwo both;
+	animation-name: animbubtwo,alivebubtwo;
+	animation-duration: 5s,15s;
+	animation-delay: 0s,5s;
 	animation-iteration-count: 1, infinite;
 	-webkit-filter:blur(10px);
 }
@@ -281,6 +287,21 @@ li{
 	}
 	100%{
 		bottom:-80%;
+	}
+}
+
+@keyframes alivebubtwo{
+	0%{
+		bottom: -80%;
+		left:60%;
+	}
+	50%{
+		bottom:-50%;
+		left:80%;
+	}
+	100%{
+		bottom: -80%;
+		left: 60%;
 	}
 }
 	/* End Bubble 2 */
@@ -375,5 +396,19 @@ li{
 }
 	/* End Bubble 4 */
 
-
 /* End Bubble effect */
+
+/* About tab */
+#tab_about{
+	position: relative;
+	width: 100%;
+	height:100%;
+	margin-top: 490px;
+	text-align: center;
+	display: block;
+}
+.text_a{
+	position:absolute;
+	text-align: center;
+}
+/* End About tab */
