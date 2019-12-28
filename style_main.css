@@ -14,6 +14,16 @@
 /* Body and etc */
 body{
 	/*overflow: hidden;*/
+	overflow-x: hidden;
+	animation:3s all_opacity linear;
+}
+@keyframes all_opacity{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 a{
 	color:#000;
@@ -212,6 +222,46 @@ li{
   }
 }
 
+.comming_soon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0px auto;
+  width: 200px;
+  height: 100px;
+  background: white;
+  border-radius: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 5s box-shadow;
+  cursor:pointer;
+}
+
+.comming_soon:hover{
+	animation:1s shake linear;
+}
+
+@keyframes shake{
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }	
+}
+
 /* End Top Button */
 
 
@@ -399,16 +449,98 @@ li{
 /* End Bubble effect */
 
 /* About tab */
+.main_tab_about{
+	position: relative;
+	width: 100%;
+	height:50%;
+}
 #tab_about{
 	position: relative;
 	width: 100%;
-	height:100%;
-	margin-top: 490px;
+	height:50%;
+	margin-top: 450px;
 	text-align: center;
-	display: block;
+}
+.img_a{
+	opacity:0.5;
+	width: 100%;
+	height: 930px;
+	border-radius: 150px;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+	
+	/* Title About */
+.bub_a{
+	left:50%;
+	right:50%;
 }
 .text_a{
-	position:absolute;
 	text-align: center;
+	position:absolute;
+	color:white;
+	z-index: 1;
+	width: 100%;
+	font-family: 'Varela Round';
+	font-size: 100px;	
+	margin:0;
 }
+	/* End Title About */
+
+	/* Comment 1 */ 
+.bub_a2{
+	left:15%;
+	top:20%;
+}
+.text_a2{
+	text-align: center;
+	position:absolute;
+	color:white;
+	z-index: 1;
+	width: 100%;
+	font-family: 'Varela Round';
+	font-size: 50px;	
+	margin:0;
+}
+	/* End comment 1 */
+
+	/* Comment 2 */ 
+.bub_a3{
+	left:40%;
+	top:50%;
+}
+.text_a3{
+	text-align: center;
+	position:absolute;
+	color:white;
+	z-index: 1;
+	width: 100%;
+	font-family: 'Varela Round';
+	font-size: 40px;	
+	margin:0;
+}
+	/* End Comment 2 */
+
+	/* Comment 3 */
+.bub_a4{
+	left:65%;
+	top:50%;
+}
+.text_a4{
+	text-align: center;
+	position:absolute;
+	color:white;
+	z-index: 1;
+	width: 100%;
+	font-family: 'Varela Round';
+	font-size: 90px;	
+	margin:0;
+}
+	/*End Comment 3 */
+
+	
 /* End About tab */
